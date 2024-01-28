@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Quiz App - Quiz</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+
+</head>
+<body>
+<h1 th:text="${question.question}"></h1>
+<form action="#" th:action="@{/quiz}" method="post">
+    <div th:each="option, index : ${question.options}">
+        <input type="radio" th:name="answer" th:id="'option' + ${index}" th:value="${index}"/>
+        <label th:for="'option' + ${index}" th:text="${option}"></label>
+    </div>
+    <button type="submit">Next Question</button>
+</form>
+</body>
+</html>

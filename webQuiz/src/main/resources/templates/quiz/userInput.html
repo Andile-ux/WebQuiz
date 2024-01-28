@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Quiz App - User Input</title>
+</head>
+<body>
+<h1>Provide your name:</h1>
+<form action="#" th:action="@{/quiz}" method="post">
+    <input type="text" name="username" required/>
+    <button type="submit">Start Quiz</button>
+</form>
+</body>
+</html>

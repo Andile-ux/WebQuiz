@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Quiz App - Result</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+
+</head>
+<body>
+<h1 th:text="${username + ', you have answered ' + score + ' of ' + data.size() + ' questions correctly.'}"></h1>
+<h2>Result Emoji: 😊 or 😢</h2>
+<button onclick="location.href='/quiz';">Try Again</button>
+</body>
+</html>
